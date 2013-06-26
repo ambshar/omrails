@@ -1,0 +1,23 @@
+<h1>Listing shares</h1>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  
+    <%= render @shares %>
+ 
+  </tbody>
+
+</table>
+
+<br />
+
+<%= link_to 'New Share', new_share_path %>
