@@ -9,7 +9,14 @@
 		<p>
 		   <%= @share.description %>
 		</p>
+
+		<p>
+		   <%= @share.user.name %>
+		</p>
+		<% if current_user==@share.user %>
 		<%= link_to 'Edit', edit_share_path(@share) %> |
+		
+		<%end%>
 		<%= link_to 'Back', shares_path %>
 		</div>
 	</div>

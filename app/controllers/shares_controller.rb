@@ -1,4 +1,5 @@
 class SharesController < ApplicationController
+  before_filter :authenticate_user!, except: [:index, :show]
   # GET /shares
   # GET /shares.json
   def index
@@ -24,7 +25,7 @@ class SharesController < ApplicationController
   # GET /shares/new
   # GET /shares/new.json
   def new
-    @share = Share.new
+    @share = current_user.shares.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +35,13 @@ class SharesController < ApplicationController
 
   # GET /shares/1/edit
   def edit
-    @share = Share.find(params[:id])
+    @share = current_user.shares.find(params[:id])
   end
 
   # POST /shares
   # POST /shares.json
   def create
-    @share = Share.new(params[:share])
+    @share = current_user.shares.new(params[:share])
 
     respond_to do |format|
       if @share.save
@@ -56,7 +57,7 @@ class SharesController < ApplicationController
   # PUT /shares/1
   # PUT /shares/1.json
   def update
-    @share = Share.find(params[:id])
+    @share = current_user.shares.find(params[:id])
 
     respond_to do |format|
       if @share.update_attributes(params[:share])
@@ -72,7 +73,7 @@ class SharesController < ApplicationController
   # DELETE /shares/1
   # DELETE /shares/1.json
   def destroy
-    @share = Share.find(params[:id])
+    @share = current_user.shares.find(params[:id])
     @share.destroy
 
     respond_to do |format|
