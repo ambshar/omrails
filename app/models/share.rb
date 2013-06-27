@@ -1,5 +1,5 @@
 class Share < ActiveRecord::Base
-  attr_accessible :description, :title, :image
+  attr_accessible :description, :title, :image, :user_id
 
 validates :title, presence: true, length: {maximum: 200}
 validates :description, presence: true, length: {maximum: 4000}
