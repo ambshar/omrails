@@ -1,26 +1,39 @@
 <div class="row">
-	<div class="span6 offset3">
+	<div class="span6">
+		
+
 		<div class="well" >
+			<p>
+		   <%= @share.user.name %>
+		</p>
 			<div align="center">
 		<%= image_tag @share.image %>
 			</div>
 
-		<p>
-		   <%= @share.title %>
-		</p>
-
-		<p>
-		   <%= @share.description %>
-		</p>
-
-		<p>
-		   <%= @share.user.name %>
-		</p>
+				
 		<% if current_user==@share.user %>
 		<%= link_to 'Edit', edit_share_path(@share) %> |
 		
 		<%end%>
 		<%= link_to 'Back', shares_path %>
+		</div>
+	</div>
+	<div class = "span4">
+		<div class="well" >
+			<h3 class="title">
+		   <%= @share.title %>
+		</h3>
+
+		<p>
+		   <%= @share.description %>
+		</p>
+
+
+		</div>
+	</div>
+	<div class = "span2">
+		<div class="well" >
+
 		</div>
 	</div>
 </div>

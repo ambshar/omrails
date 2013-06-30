@@ -28,6 +28,31 @@ a{
 }
 }
 
-.share_entity {
-	align: center
+
+/* Required for jQuery masonry*/
+.box {
+	margin: 5px;
+	padding: 5px;
+	font-size: 11px;
+	line-height: 1.4em;
+	float: left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: 1px 1px 10px #444;
+	width: 257px;
+
+}
+
+.box img{
+	display: block;
+	width: 100%;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+}
+
+.title{
+	margin: 10px 0 5px;
 }

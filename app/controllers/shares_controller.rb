@@ -3,7 +3,7 @@ class SharesController < ApplicationController
   # GET /shares
   # GET /shares.json
   def index
-    @shares = Share.all
+    @shares = Share.order("created_at desc")
 
     respond_to do |format|
       format.html # index.html.erb
