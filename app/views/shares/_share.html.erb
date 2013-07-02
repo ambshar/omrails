@@ -1,23 +1,23 @@
 <div class = "tile">
-<div class="box">
-	<%= link_to (image_tag share.image(:medium)),share %>
-	
-	
-</div>
-<div class="tiletext">
-	<p class="title">
-	<%= share.title %>
-	</p>
-	<p>
-		<strong>
-		<%= share.user.name %>
-		</strong>
-	</p>
-	<p>
-		<% if current_user == share.user %>
-			<%= link_to 'Edit', edit_share_path(share) %>
-			<%= link_to 'Destroy', share, method: :delete, data: { confirm: 'Are you sure?' } %>
-		<% end %>
-	</p>
-</div>
+	<div class="box">
+		<%= link_to (image_tag share.image(:medium)),share %>
+		
+		
+	</div>
+	<div class="tiletext">
+		<p class="title">
+		<%= share.title %>
+		</p>
+		<p>
+			<strong>
+			<%= link_to share.user.name, share.user %>
+			</strong>
+		</p>
+		<p>
+			<% if current_user == share.user %>
+				<%= link_to 'Edit', edit_share_path(share) %>
+				<%= link_to 'Destroy', share, method: :delete, data: { confirm: 'Are you sure?' } %>
+			<% end %>
+		</p>
+	</div>
 </div>

@@ -1,0 +1,11 @@
+<h1><%= @user.name %></h1>
+
+<div id="shares">
+  <%= render @shares %>
+
+</div>
+<div class="span12">
+<%= will_paginate @shares %>
+</div>
+  end
+

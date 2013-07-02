@@ -1,8 +1,11 @@
 Omrails::Application.routes.draw do
+  get "users/show"
+
   resources :shares
 
 
   devise_for :users
+  match 'users/:id' => 'users#show', as: :user
 
   #get "pages/home"
   
