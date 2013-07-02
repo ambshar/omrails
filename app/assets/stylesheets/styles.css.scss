@@ -30,29 +30,56 @@ a{
 
 
 /* Required for jQuery masonry*/
-.box {
-	margin: 5px;
-	padding: 5px;
+
+.tile {
+	margin: 10px;
+	padding: 0px;
 	font-size: 11px;
 	line-height: 1.4em;
 	float: left;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
 	box-shadow: 1px 1px 10px #444;
 	width: 257px;
+
+}
+
+.box {
+	margin: 0px;
+	padding: 0px;
+	font-size: 11px;
+	line-height: 1.4em;
+	float: left;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	/*box-shadow: 1px 1px 10px #444;*/
+	width: 100%;
 
 }
 
 .box img{
 	display: block;
 	width: 100%;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+
 
 }
 
-.title{
-	margin: 10px 0 5px;
+.tiletext {
+	margin-left: 5px;
+	margin-top: 15px;
+	padding: 0px;
+	font-size: 11px;
+	line-height: 1.4em;
+	float: left;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	/*box-shadow: 1px 1px 10px #444;*/
+	width: 100%;
 }
+

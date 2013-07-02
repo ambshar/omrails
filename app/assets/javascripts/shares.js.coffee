@@ -4,4 +4,4 @@
 
 jQuery ->
 	$('#shares').imagesLoaded ->
-		$('#shares').masonry itemSelector: ".box"
+		$('#shares').masonry itemSelector: ".box", gutterWidth: "5"

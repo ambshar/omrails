@@ -1,5 +1,8 @@
 <%= render 'pages/home' %>
 <div id="shares">
   <%= render @shares %>
-</div>
 
+</div>
+<div class="span12">
+<%= will_paginate @shares %>
+</div>
